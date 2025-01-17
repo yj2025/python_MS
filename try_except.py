@@ -1,3 +1,4 @@
+# 예외 처리
 class Grade:
     def init(self,kor,eng,math):
         self.kor = kor

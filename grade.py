@@ -1,3 +1,4 @@
+# 성적
 class Grade:
     def __init__(self,kor,eng,math):
         self.kor = kor
