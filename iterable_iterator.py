@@ -1,3 +1,4 @@
+# iterable_iterator
 class Counter:
     def __init__(self, stop):
         self.current = 0        # 현재 숫자 유지, 0부터 지정된 숫자까지 반복
