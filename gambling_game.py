@@ -34,11 +34,11 @@ while True:
         player.set_list_numbers()
 
         numbers = player.get_list_numbers()
-
+        
         #if (numbers[0] == numbers[1]) and (numbers[1] == numbers[2]) and (numbers[0] == numbers[2]) :
         #    print(player.name + "가 이겼습니다!" + str(numbers))
         #    break
-
+        
         if len(set(player.get_list_numbers())) == 1:
             print(player.name + "가 이겼습니다!" + str(player.get_list_numbers()))
             is_stop = True

@@ -1,6 +1,3 @@
-import random
-from ast import Try
-
 # 주사위 게임
 # 1번 참가자 이름 입력
 # 2번 참가자 이름 입력
@@ -19,6 +16,8 @@ from ast import Try
 # else:
 #   print('무승부')
 
+import random
+from ast import Try
 
 class DiceGame:
     def __init__(self):
