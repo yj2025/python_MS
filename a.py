@@ -1,49 +1,36 @@
-import random
-
 class Person:
-    def __init__(self, name):
-        self.name = name
-        self.list_numbers = []
+    def __init__(self, name, age):
+        self.__name = name
+        self.__age = age
 
-    def set_list_numbers(self):
-        input(self.name + "의 turn. <Press the Enter Key> ")
-        self.list_numbers = [random.randint(1, 3) for i in range(3)]
-        print(self.name + "의 숫자 : " + str(self.list_numbers) + "입니다.")
-        # self.list_numbers가 리스트이기 떄문에 문자열과 결합할 때 str로 변환해줘야 함
+    # if 문의 해당 함수에서 0이 들어 가지 않도록 막음
+    def add_age(self,age):
+        if age < 0:
+            print('나이는 0보다 커야 합니다. 나이 정보 오류')
+        else:
+            self.__age += age
 
-    def get_list_numbers(self):
-        return self.list_numbers
+    def __str__(self):
+        return f'이름은 {self.__name}, 나이는 {self.__age}'
 
-while True:
-    try:
-        player1_name = input("첫 번째 사람의 이름을 입력하세요: ")
-        player2_name = input("두 번째 사람의 이름을 입력하세요: ")
-        break
-    except:
-        print("잘못된 입력입니다. 다시 입력하세요")
-        continue
 
-player1 = Person(player1_name)
-player2 = Person(player2_name)
-tuple_player = (player1, player2)
-# tuple_player = (Person(player1_name), Person(player2_name))
-is_stop = False
+p = Person('홍길동', 20)
+p.__age = 30
 
-while True:
-    for player in tuple_player:
-        player.set_list_numbers()
 
-        numbers = player.get_list_numbers()
+def deco(fun):
+    def wrapper():
+        print('emotion!')
+        fun()
+        print('emotion!')
+    return wrapper
 
-        #if (numbers[0] == numbers[1]) and (numbers[1] == numbers[2]) and (numbers[0] == numbers[2]) :
-        #    print(player.name + "가 이겼습니다!" + str(numbers))
-        #    break
+@deco
+def smile():
+    print('^_^')
 
-        if len(set(player.get_list_numbers())) == 1:
-            print(player.name + "가 이겼습니다!" + str(player.get_list_numbers()))
-            is_stop = True
+def confused():
+    print('@_@')
 
-            break
+smile()
 
-    if is_stop:
-        break
