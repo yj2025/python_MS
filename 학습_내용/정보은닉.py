@@ -13,8 +13,10 @@ obj = MyClass()
 print(obj.get_hidden())
 obj.set_hidden(100) # __hidden 값을 100으로 변경
 print(obj.get_hidden()) # 100 출력
+
 # ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 # ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
 class Person:
     def __init__(self, name, age):
         self.__name = name
