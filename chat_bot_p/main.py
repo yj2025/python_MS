@@ -1,4 +1,4 @@
-# konlpy 라이브러리 설치
+# konlpy 라이브러리 설치 한국어 자연어 처리를 위한 파이썬 라이브러리
 # import sys
 # import subprocess
 
@@ -6,7 +6,7 @@
 
 
 # main.py
-# -*- coding:utf-8 -*-
+# coding:utf-8
 from flask import Flask, render_template, request, redirect, url_for
 import chatbot
 
