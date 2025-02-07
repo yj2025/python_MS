@@ -10,5 +10,8 @@ conn = pymysql.connect(
     db='scott', charset='utf8')
 
 sql = "select * from emp"
-df = pd.read_sql(sql, conn)
-print(df)
+df_emp = pd.read_sql(sql, conn)
+print(df_emp)
+
+df_emp.to_csv('emp.csv')
+df_emp.to_excel('emp.xlsx')
