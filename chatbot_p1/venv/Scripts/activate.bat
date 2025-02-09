@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=C:\python(MS)\chatbot_p1\venv"
+set "VIRTUAL_ENV=C:\python_MS\chatbot_p1\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
