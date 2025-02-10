@@ -3,11 +3,12 @@
 # terminal) python bot.py  --실행
 
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ListTrainer # 챗봇을 리스트 형태의 데이터로 학습
 
 chatbot = ChatBot("Chatpot")
 trainer = ListTrainer(chatbot)
 
+# 규칙 기반 (미리 정의된 질문-응답 쌍 데이터 학습)
 trainer.train([
     "안녕하세요",
     "반갑습니다. 저는 채용 공고 사이트를 알려드릴 수 있습니다.",
