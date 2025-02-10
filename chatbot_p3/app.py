@@ -6,7 +6,7 @@
 from openai import OpenAI
 import streamlit as st
 
-st.title("ChatGPT-like clone")
+st.title("챗봇 만들기")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
