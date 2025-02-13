@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 800px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        #header {
+            background-color: blue;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #main-content {
+            width: 800px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        #content {
+            width: 60%;
+            float: left;
+            text-align: left;
+            background-color: orange;
+            padding: 10px;
+        }
+
+        #sidebar {
+            width: 30%;
+            float: right;
+            text-align: left;
+            background-color: green;
+            padding: 10px;
+        }
+
+        #footer {
+            clear: both; /* float 초기화 */
+            height: 70px;
+            background-color: brown;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">고정 그리드 레이아웃</div>
+        <div id="main-content" class="clearfix">
+            <div id="content">본문</div>
+            <div id="sidebar">사이드바</div>
+        </div>
+        <div id="footer">푸터</div>
+    </div>
+</body>
+
+</html>
