@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html{
+            font-size: 32px;
+        } */
+        body {
+            font-size: 32px;
+        }
+        
+        div {
+            /* 부모값의 2배 크기로 나타남 */
+            font-size: 2em;
+        }
+
+        /* # 아이디 선택자 */
+        #hello {
+            /* root em 16px (html 기본 16px * 2 = 32px) */
+            font-size: 2rem;
+        }
+        
+        /* . 클래스 선택자 */
+        .parent {
+            height: 100vh;
+            width: 100%;
+            background: rgb(201,179,125);
+        }
+        
+        .child {
+            height: 50%;
+            width: 60%;
+            background: rgb(92, 170, 206);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>안녕하세요</div> -->
+    <!-- <div id="hello">안녕하세요</div> -->
+     <div class="parent">
+        <div class="child"></div>
+     </div>
+</body>
+</html>
