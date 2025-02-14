@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        /* 부모 기준 = 원래 있엇던 자리 (부모기준) */
+        #red {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* static은 모든 요소의 기본 위치 속성 */
+            position: static;
+        }
+        #yellow {
+            width: 400px;
+            height: 400px;
+            background-color: yellow;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+        #green {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: relative;
+            top: -300px;
+            left: 200px;
+        }
+        #blue {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            top: -300px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="yellow"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+</body>
+</html>
