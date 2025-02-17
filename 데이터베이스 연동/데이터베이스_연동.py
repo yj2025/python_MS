@@ -2,17 +2,18 @@ import pymysql
 
 # MySQL Connection 연결
 conn = pymysql.connect(
-    host='localhost',
-    user='scott',
+    host='localhost',   # MySQL 서버 주소
+    user='scott',       # 사용자 이름
     password='tiger',
-    db='scott', charset='utf8')
+    db='scott',
+    charset='utf8')     # 문자 인코딩
 
 # Connection으로부터 Cursor 생성
-# cursor 객체 생성 => 커서 객체의 역활은은 sql 문장을 실행하고 결과를 가져오는 역할
+# cursor 객체 생성 => 커서 객체의 역활은 sql 문장을 실행하고 결과를 가져오는 역할
 curs = conn.cursor()
 
-# SQL문 실행
-sql = "select * from emp"
+# SQL문 실행 (dept 테이블 조회)
+sql = "SELECT * FROM dept;"
 curs.execute(sql)
 
 # 데이터 Fetch

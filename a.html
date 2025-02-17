@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #nav {
+            width: 510px;
+            height: 80px;
+            margin: auto;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            gap: 10px;
+        }
+
+        div {
+            display: inline-block;
+            width: 90px;
+            height: 70px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-left: none; 
+            border-right: none; 
+        }
+
+        a {
+            color: inherit; /* 부모 요소의 색상 그대로 적용 */
+            text-decoration: none; /* 밑줄 제거 */
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div><a href="#">menu1</a></div>
+        <div><a href="#">menu2</a></div>
+        <div><a href="#">menu3</a></div>
+        <div><a href="#">menu4</a></div>
+        <div><a href="#">menu5</a></div>
+    </div>
+</body>
+</html>
