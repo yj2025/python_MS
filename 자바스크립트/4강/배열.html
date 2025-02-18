@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        
+        console.log(arr);
+        console.log(arr[0]);
+        console.log(arr[1]);
+
+        for(let i=0; i<arr.length; i++) {
+            document.write(arr[i] + '<br>');
+        }
+
+        arr = [123, 'ABC', true, function fun() {}, {}, undefined];
+            for (let i = 0; i < arr.length; i++) {
+                document.write(arr[i] + '<br>');
+            }
+        
+        // 배열 객체를 활용해 생성
+        let arr2 = new Array(1, 2, 3, 4, 5);
+        
+        console.log(arr2);
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+
+        for(let i=0; i<arr2.length; i++) {
+            document.write(arr2[i] + '<br>');
+        }
+
+        // 배열 객체 메서드
+        arr = new Array('가','나','다','라','마');
+        document.write(arr.pop() + '<br>');
+
+        // push / unshift() / sort / concat
+
+    </script>
+</head>
+<body>
+</body>
+</html>

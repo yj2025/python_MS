@@ -6,7 +6,9 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
         crossorigin="anonymous">
   </head>
+
   <body>
+    <!-- container 고정된 너비 -->
     <div class="container bg-primary">
         <h1>My First Bootstrap Page</h1>
         <p>This part is inside a .container class.</p>
@@ -15,6 +17,7 @@
     </div>
     <hr>
 
+    <!-- fluid 전체 화면 너비 -->
     <div class="container-fluid bg-primary">
         <h1>My First Bootstrap Page</h1>
         <p>This part is inside a .container class.</p>
@@ -23,21 +26,24 @@
     </div>
     <hr>
 
+    <!-- 패딩, 마진 -->
     <div class="container p-5 my-5 border">
         <h1>My First Bootstrap Page</h1>
         <p>This container has a border and some extra padding and margins.</p>
       </div>
       
-      <div class="container p-5 my-5 bg-dark text-white">
-        <h1>My First Bootstrap Page</h1>
-        <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
-      </div>
       
-      <div class="container p-5 my-5 bg-primary text-white">
-        <h1>My First Bootstrap Page</h1>
-        <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
-      </div>
+    <div class="container p-5 my-5 bg-dark text-white">
+      <h1>My First Bootstrap Page</h1>
+      <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+    </div>
+    
+    <div class="container p-5 my-5 bg-primary text-white">
+      <h1>My First Bootstrap Page</h1>
+      <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+    </div>
 
+    <!-- Bootstrap 5의 JavaScript 파일을 불러오는 코드 -->
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
