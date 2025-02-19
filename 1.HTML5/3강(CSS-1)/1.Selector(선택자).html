@@ -1,0 +1,45 @@
+<!-- Selector 선택자 -->
+<style>
+    div {
+        background-color: #ffd800;
+    }
+
+    /*
+        CSS의 우선순위(Cascade & Specificity)
+            선택자의 특이성(Specificity)
+            p가 *보다 더 높은 우선순위를 가짐
+            같은 우선순위를 가진 스타일이면 나중에 작성된 스타일이 적용됨
+            *보다 높은 우선순위로 강제하려면 !important를 추가하면됨
+    */
+
+    p {
+        color: red;
+    }
+
+    /* 전체 셀렉터 → 모든 엘리먼트 선택 */
+    * {color:blue }
+    
+    /* * {color:green !important;} */
+
+</style>
+
+<body>
+    <h1>This is Title</h1>
+    <p>This is Paragraph</p>
+
+     <hr>
+
+    <div>
+        <h1>This is Title</h1>
+        <p>This is Paragraph</p>
+    </div>
+
+</body>
+<!-- 
+    우선순위
+1. 인라인 스타일
+2. ID 선택자
+3. 클래스, 속성, 가상 클래스
+4. 태그, 가상 요소
+5. 전체 선택자 
+ -->

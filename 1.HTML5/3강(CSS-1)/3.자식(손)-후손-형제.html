@@ -1,0 +1,53 @@
+<head>
+    <style>
+        /* 자손 선택자(>) → 직접적인 자식 요소만 선택 → 부모 바로 아래 있는 태그만 스타일 적용 */
+        div > p{
+            font-weight: bold;
+            color: #ce3737;
+        }
+        /* 후손 선택자 (공백)  →  모든 하위 요소(자식, 손자, 그 이하까지) 다 선택 */
+        div a {
+            color: rgb(30, 165, 30);
+        }
+
+        /* 일반 형제 선택자 (~)  →  같은 부모를 가지는 모든 형제 요소를 선택 */
+        h4 ~ div{
+            font-size: 50px;
+            color : orange;
+        }
+
+        /* 인접 형제 선택자(+)   →   바로 다음 형제 요소만 선택 */
+        h4 + div{
+            font-size: 50px;
+            color : blue;
+        }
+        
+        /* #title ~ div{
+            font-size: 30px;
+            color : green;
+        } */
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p>자손 선택자  Lorem ipsum</p>
+        <ul>
+            <p>자손 선택자  sed do eiusmod</p>
+            <li><p>자손 선택자  arcu dui vivamus arcu felis</p></li>
+            <a>후손 선택자  sed do eiusmod</a>
+            <li><p><a>후손 선택자   arcu dui vivamus arcu felis</a></p></li>
+        </ul>
+    </div>
+    
+    <hr>
+
+    <h4 id="title">동위 선택자(+, ~)</h4>
+    <div>div_01</div>
+    <div>div_02</div>
+    <div>div_03</div>
+    <div>div_03</div>
+    
+    <hr>
+
+</body>
+</html>
