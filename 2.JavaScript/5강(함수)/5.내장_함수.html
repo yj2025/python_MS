@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        
+        // 내장 함수
+        // alert('');
+        // prompt('');
+        // confirm('');
+        // document.write();
+        // console.log();
+
+        // 시간 관련 함수
+        let callback = function() {
+            alert('1초 후 실행');
+        };
+
+        // setTimeout(callback, 1000);
+
+        let intervalId = setInterval(() => {
+            document.write('1초 마다 실행 <br>');
+        }, 1000);
+
+        // clearInterval(intervalId);
+        callback = function() {
+            clearInterval(inetervalId);
+            document.write('종료');
+        };
+        let setTimeout = setTimeout(callback, 1000 * 10);
+
+    </script>
+</head>
+<body>    
+</body>
+</html>

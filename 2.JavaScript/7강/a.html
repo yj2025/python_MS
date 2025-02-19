@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let grade = {
+            getGrade: function(score1, score2, score3) {
+                let avg = (score1 + score2 + score3) / 3;
+                if (avg >= 90) {
+                    return '수입니다';
+                } else if (avg >= 80) {
+                    return '우입니다';
+                } else if (avg >= 70) {
+                    return '미입니다';
+                } else if (avg >= 60) {
+                    return '양입니다';
+                } else {
+                    return '가입니다';
+                }
+            }
+        };
+
+        console.log(grade.getGrade(90, 90, 90)); // 출력: 수입니다
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

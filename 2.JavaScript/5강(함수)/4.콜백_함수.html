@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function printResult(fun) {
+            document.write(fun);
+        }
+
+        function add(x,y) {
+            return x + y;
+        }
+
+        printResult(add(10, 20));
+
+        document.write('<hr>')
+        
+        
+        
+        // 콜백 함수
+        function addCallback(x, y, callback) {
+            callback(x + y);
+        }
+        
+        function sayResult(value) {
+            document.write(value);
+        }
+        
+        addCallback(10, 20, sayResult);
+        
+        document.write('<hr>')
+        
+        
+        function funName(funCBF, funCBP, num){
+
+            for(var i=1; i<=10; i++) {
+                console.log(num + " * " + i + " = " + (num * i));
+                if(i < 10) funCBP(i);
+            }
+
+            funCBF();
+
+        }
+
+        function funCallBackProgress(n){
+
+        console.log((n * 10) + "% 진행 완료!");
+
+        };
+
+        function funCallBackFinish(){
+
+        console.log("서버 작업 종료!");
+
+        };
+
+        funName(funCallBackFinish, funCallBackProgress, 7);
+
+    </script>
+</head>
+<body>    
+</body>
+</html>

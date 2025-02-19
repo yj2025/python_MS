@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        /* 함수 실행 순서 */
+        fun1();        // 정상 실행     명시적 함수 선언(function 키워드) → 호이스팅 O
+        //  fun2();        // 오류 발생     익명 함수(함수 표현식) → 호이스팅 X
+
+        // 명시(선언)적 함수 생성
+        function fun1(){
+            console.log("fun1 run!");
+        }
+
+        // 익명 함수 생성
+        var fun2 = function(){
+            console.log("fun2 run!");
+        }
+        
+        fun2();        //정상 실행
+        
+        
+        let avg = function(x, y, z){
+            return (x+y+z) / 3
+        }
+        
+        document.write(avg(90,60,30) + '<br>')
+
+        let grade = function(avg) {
+            if(avg >= 90) {
+                return '수';
+            }
+            else if(avg >= 80) {
+                return '우';
+            }
+            else if(avg >= 70) {
+                return '미';
+            }
+            else if(avg >= 60) {
+                return '양';
+            }
+            else {
+                return '가';
+            }
+        }
+
+        document.write(grade(avg(90,60,60)) + '<br>');
+
+        let mulFunc = function(num) {
+            return num * 2;
+        }
+        
+        // 화살표 함수 특징 : 익명함수 형태로 만듦 (명시적 함수로는 불가능)  arguments 없음 this 용도 다름
+        let mulFunc2 = (num) => num * num; 
+        
+        document.write(mulFunc(10) + '<br>');
+        document.write(mulFunc2(10));
+        
+        document.write('<hr>');
+
+        
+        function gugudan1(n) {
+            for (let i = 1; i < 10; i++) {
+                document.write(`${n}x${i}=${n * i}<br>`);
+            }
+        }
+
+        let gugudan2 = function(n) {
+            for (let i = 1; i < 10; i++) {
+                document.write(`${n}x${i}=${n * i}<br>`);
+            }
+        }
+        
+        let gugudan3 = (n) => {
+            for (let i = 1; i < 10; i++) {
+                document.write(`${n}x${i}=${n * i}<br>`);
+            }   
+        }
+        
+        gugudan1(2) // 명시적
+        document.write('<hr>')
+        gugudan2(2) // 익명
+        document.write('<hr>')  
+        gugudan3(2) // 화살표
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

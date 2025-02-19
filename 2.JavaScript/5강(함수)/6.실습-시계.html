@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        
+        // var timer = new Date();
+
+        // 1
+        // setInterval(() => {
+        //     timer = new Date();
+        //     document.write(timer.getHours() + ':' + timer.getMinutes() + ':' + timer.getSeconds() + '<br>');
+        // }, 1000);
+
+        // 2
+        setInterval(function () {
+            let timer = new Date();
+            let h = timer.getHours();
+            let m = timer.getMinutes();
+            let s = timer.getSeconds();
+
+            //document.write(h + '시' + m + '분' + s + '초' + '<br>');
+            document.getElementById('clock').innerHTML =
+                h + '시' + m + '분' + s + '초';
+        }, 1000);
+
+    </script>
+</head>
+<body>
+    <div id="clock"><h1></h1></div>
+</body>
+</html>

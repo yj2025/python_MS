@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        function add(num1, num2) {
+            return num1 + num2;
+        }
+        
+        document.write(add(10,20) + '<br>');
+        document.write(add(100,200) + '<br>');
+        
+        // 익명 함수
+        let add2 = function(num1, num2) {
+            return num1 + num2;
+        }
+
+        document.write(add(10,20) + '<br>');
+        document.write(add(100,200) + '<br>');
+
+        // func = lambda x : x + 1
+        // func(4)
+
+        // 매개변수 리턴값
+        function funXYZ(x,y,z) {
+            document.write('<hr>')
+            document.write(x + '<br>')
+            document.write(y + '<br>')
+            document.write(z + '<br>')
+        
+            let result = x * y * z;
+            return result;
+        }
+        
+        let result = funXYZ(10,20,30);
+        document.write(result + '<br>')
+        
+        result = funXYZ(10,20,30,40);
+        document.write(result + '<br>')
+
+        result = funXYZ(1, 2);
+        document.write(result + '<br>');
+        
+        document.write('<hr>');
+        
+        // JS 함수에서는, 모든 매개변수를 배열(arguments)로 받는다
+        // this
+        function funExample() {
+
+            console.log(arguments);
+            console.log(this);
+
+            return arguments;
+        }
+
+        let varArr = funExample(1, 2, 3, 4, 5);
+
+        console.log(varArr);
+        console.log(varArr.length);
+        console.log(varArr[0]);
+
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
