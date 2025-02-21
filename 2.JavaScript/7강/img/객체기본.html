@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let objName = {
+            name: '홍길동',
+            nation: 'korea',
+            gender: 'men',
+            character: 'good',
+        };
+
+        // 속성주기(동적으로 추가 가능)
+        objName.talent = 'singing';
+        console.log(objName);
+
+        // 속성값 변경
+        objName.talent = 'fencing';
+        console.log(objName);
+        
+        // 속성값 삭제
+        delete objName.talent;
+        console.log(objName);
+
+        // in, with 키워드
+        document.write('<hr>');
+        console.log('name' in objName); // true
+        console.log('age' in objName);  // false
+
+        // 객체 이름 생략 가능
+        with(objName){
+            console.log(objName);
+            console.log(nation);
+            console.log(gender);
+            console.log(character);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

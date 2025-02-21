@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #cEvent {
+            width: 200px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 1.2em;
+            background-color: #f00;
+            color: #fff;
+            font-weight: bolder;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let cEvent = document.getElementById('cEvent');
+            cEvent.onclick = function() {
+                console.log('클릭이벤트 발생');
+            };
+        };
+    </script>
+</head>
+<body>
+    <!-- <div id="cEvent" onclick="">클릭이벤트</div> -->
+    <div id="cEvent">클릭이벤트</div>
+</body>
+    <!-- <script>
+        function headerClick() {
+            // alert('클릭이벤트 발생');
+            // document.write('클릭이벤트 발생');
+            console.log('클릭이벤트 발생');
+
+            // 이벤트 제거
+            let ce = document.getElementById('cEvent');
+            console.log(ce);
+            ce.onclick = null;
+        }
+    </script> -->
+</html>

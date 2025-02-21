@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        
+    </style>
+
+</head>
+<body>
+
+    <!-- Counter(카운터) -->
+    
+    <!-- <script>
+        function up() {
+            let quantityInput = document.getElementById("quantity");
+            let count = parseInt(quantityInput.value) || 1; // 숫자가 아닐 경우 기본값 1
+            quantityInput.value = count + 1;
+        }
+
+        function down() {
+            let quantityInput = document.getElementById("quantity");
+            let count = parseInt(quantityInput.value) || 1;
+            if (count > 1) {
+                quantityInput.value = count - 1;
+            }
+        }
+    </script> -->
+
+    
+    <script></script>
+    
+    갯수<input type="text" name="quantity" id="quantity" value="1" />
+    <button id="up" onclick="up()">+</button>
+    <button id="down" onclick="down()">-</button>
+    
+    <hr>
+    
+    <!-- 글자수 세기 -->
+
+    글자수 세기 <br>
+    <textarea rows="10" cols="10" onkeydown="change()"></textarea><br />
+    입력문자수:<span id="result"></span>
+
+</body>
+
+    <script>
+        function up() {
+            let quantity = document.getElementById('quantity');
+            quantity.value = parseInt(quantity.value) + 1;
+        }
+
+        function down() {
+            let quantity = document.getElementById('quantity');
+            quantity.value = parseInt(quantity.value) - 1;
+        }
+    </script>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <script>
+        window.onload = function() {
+            let tag = document.createElement('p');
+            let text = document.createTextNode('Hello World');
+    
+            tag.appendChild(text);
+            document.body.appendChild(tag);
+
+            document.write('<hr>');
+
+            let imgTag = document.createElement('img');
+            imgTag.src = 'img/logo.png';
+            imgTag.width = '200';
+            imgTag.height = '200';
+            imgTag.setAttribute('width', '200');
+            document.body.appendChild(imgTag);
+        }
+        // innerHTML
+        let str = '';
+        str += " <img src='./img/logo.png', ";
+        str += " width='170', height='67', tempData='logoImg'> ";
+
+        // 선택자 : #id     .class
+
+
+        // 쿼리 셀렉터
+
+
+        // 객체(태그) 삭제
+
+    </script>
+</head>
+<body>
+    <p id="hello">안녕하세요</p>
+    <p id="hello2">Hello World</p>
+</body>
+<script>
+    // let tag = document.createElement('p');  // <p></p>
+    // let text = document.createTextNode('Hello World');  // Hello World
+    
+    // tag.appendChild(text);  // <p>Hello World</p>
+    // document.body.appendChild(tag);
+</script>
+</html>

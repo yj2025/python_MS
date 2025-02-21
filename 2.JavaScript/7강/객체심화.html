@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createCar(name, color, speed) {
+            let car = {
+                name: name,
+                color: color,
+                speed: 100,
+                run: function(power) {
+                    return this.speed * power;
+                },
+            };
+
+            return car;
+        }
+        
+        let sonata = createCar('sonata', 'black', 100);
+        console.log(sonata);
+        console.log(sonata.run(2));
+        let bmw = createCar('bmw', 'white', 200);
+        console.log(bmw);
+        
+        // 가위 바위 보
+        function createUser(name, rsp) {
+            let user = {
+                name: name,
+                rsp: rsp,
+            };
+            
+            return user;
+        }
+        
+        let user = createUser('유저', '가위');
+        let computer = createUser('컴퓨터', '바위');
+        console.log(user);
+        console.log(computer);
+
+        // 생성자를 이용한 객체 생성
+        let date = new Date();
+        console.log(date);
+        console.log(date.getFullYear());
+        console.log(date.getMonth());
+
+        // 생성자 함수 : 객체를 생성하는 함수
+        // 1. 함수 이름은 대문자로 시작
+        // 2. 반드시 new 키워드를 이용해서 객체 생성
+
+        //  주의) this => 호출한 놈
+
+        function Airplane(name, color, speed) {
+            console.log(arguments);
+            console.log(this);
+
+            // this는 호출한 객체를 가리키며, this.property를 통해 변수를 동적 생성하고 있음
+            // this -> python  self 개념
+            this.name = name;
+            this.color = color;
+            this.speed = speed;
+            this.fly = function (power) {
+                return this.speed + " fly! ";
+            };
+        }
+
+        let boeing747 = new Airplane('boeing747', 'white', 1000); //=>{ name: 'boeing747', color: 'white', speed: 1000, fly: [Function] }
+            console.log(boeing747);
+            console.log(typeof boeing747);
+            document.write(boeing747.name + '<br>');
+            document.write(boeing747.color + '<br>');
+            document.write(boeing747.speed + '<br>');
+            document.write(boeing747.fly() + '<br>');
+
+        let airbus = new Airplane('airbus', 'black', 2000);
+        console.log(airbus.color);
+
+        function Grade(name, kor, eng, math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+            this.total = function () {
+                return this.kor + this.eng + this.math;
+            };
+            this.avg = function () {
+                return this.total() / 3;
+            };
+        }
+
+        let hong = new Grade('홍길동', 100, 90, 80);
+        document.write(hong.total() + '<br>');
+        document.write(hong.avg() + '<br>');
+        // document.write(hong.getGrade() + '<br>'); //수입니다.
+
+        let lee = new Grade('이순신', 90, 90, 80);
+        document.write(lee.total() + '<br>');
+        document.write(lee.avg() + '<br>');
+        // document.write(lee.getGrade() + '<br>'); //수입니다.
+
+        // ES6 클래스 추가
+        class Car {
+            constructor(name, color, speed) {
+                this.name = name;
+                this.color = color;
+                this.speed = speed;
+            };
+
+            run() {
+                return this.speed + 'km/h';
+            };
+        };
+
+        sonata = new Car('sonata', 'black', 100);
+        console.log(sonata);
+
+        // 프로토타입
+        function GradeExample(name, kor, eng, math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+            this.total = function () {
+                return this.kor + this.eng + this.math;
+            };
+            this.avg = function () {
+                return this.total() / 3;
+            };
+        };
+
+        let chulsu = new GradeExample('철수', 100, 90, 80);
+        console.log(chulsu);
+
+        function GradeProto(name, kor, eng, math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+        };
+        
+        // 프로토타입 객체에 메서드 상속
+        GradeProto.prototype.total = function () {
+            return this.kor + this.eng + this.math;
+        };
+        GradeProto.prototype.avg = function () {
+            return this.total() / 3;
+        };
+
+        GradeProto.prototype.count = 1;
+        
+        let younghee = new GradeProto('영희', 90, 90, 80);
+        console.log(younghee.count);
+        console.log(younghee.total());
+        console.log(younghee.avg());
+        
+        let chul = new GradeProto('철', 90, 90, 80);
+        console.log(chul.count);
+        
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

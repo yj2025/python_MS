@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #cEventAdd {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #f00;
+                color: #fff;
+                font-weight: bolder;
+            }
+
+            #cEventRem {
+                width: 200px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                font-size: 1.2em;
+                background-color: #0f0;
+                color: #fff;
+                font-weight: bolder;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                // addDiv와 remDiv 요소 가져오기
+                let addDiv = document.querySelector('#cEventAdd');
+                let remDiv = document.querySelector('#cEventRem');
+
+                // 클릭 이벤트 핸들러 함수 정의
+                function clickHandler() {
+                    console.log('클릭이벤트 발생');
+                }
+
+                // 클릭 이벤트 리스너 등록
+                addDiv.addEventListener('click', clickHandler);
+
+                // 이벤트 제거 함수 정의
+                function removeHandler() {
+                    console.log('클릭 이벤트 제거');
+                    addDiv.removeEventListener('click', clickHandler); // 같은 함수 참조
+                }
+
+                // removeDiv에 클릭 이벤트 리스너 등록
+                remDiv.addEventListener('click', removeHandler);
+            };
+        </script>
+    </head>
+    <body>
+        <div id="cEventAdd">click event</div>
+        <div id="cEventRem">remove event</div>
+    </body>
+</html>
