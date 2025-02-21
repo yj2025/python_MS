@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+           function eventHandler() {
+                console.log('클릭 이벤트 발생');
+                console.log(this);
+           } 
+
+           $('#objDiv').click(eventHandler);
+           $('#objPar').click(eventHandler);
+
+        });
+    </script>
+</head>
+<body>
+    <div id="objDiv">안녕하세요</div>
+    <p id="objPar">p_태그</p>
+</body>
+</html>

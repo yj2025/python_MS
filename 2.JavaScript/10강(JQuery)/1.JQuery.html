@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script>
+        window.onload = function () {
+            $('p').css('color', 'red'); 
+            jQuery('p').css('fontWeight', 'bolder');
+
+            let myJQ = jQuery('p');
+            myJQ.css('fontStyle', 'italic');
+            myJQ.css("width", "300px").css("border", "1px solid #ff0000");  // 체인
+
+            $("p")
+            .css("fontSize", "2em")
+            .css("height", "300px")
+            .css("lineHeight", "300px")
+            .css("textAlign", "center");
+        };  
+    </script>
+</head>
+<body>
+    <p>Hello JQuery</p>
+</body>
+</html>

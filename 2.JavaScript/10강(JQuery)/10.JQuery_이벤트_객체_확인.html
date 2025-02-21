@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#name").on('click', function(evnet) {
+                console.log('click 이벤트 발생');
+                console.log(event);
+                console.log(event.target.name);
+                console.log(event.target.value);
+            });
+
+            $('a').click(function(evnet) {
+                event.preventDefault(); // a 태그 기능 막음
+                console.log('a태그 클릭 이벤트 발생');
+                console.log(event.target.href);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" name="name" id="name" value="홍길동">
+    </div>
+    <div>
+        <a href="http://www.google.co.kr">google</a>
+    </div>
+</body>
+</html>

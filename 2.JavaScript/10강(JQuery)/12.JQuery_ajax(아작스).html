@@ -1,0 +1,47 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {            
+            $.ajax({
+                type: 'GET',
+                url: 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    console.log(response.homeTown);
+                    console.log(response.formed);
+                    console.log(response.members[1].name);  
+
+                    // JSON 데이터 반복 출력
+                    $.each(response.members, function (index, item) {
+                        $('#member').append(
+                            '<tr>' +
+                                '<td>' + item.name + '</td>' +
+                                '<td>' + item.age + '</td>' +
+                                '<td>' + item.secretIdentity + '</td>' +
+                                '<td>' + item.powers[0] + '</td>' +
+                            '</tr>'
+                        );
+                    });
+
+                },
+                
+                error: function (error) {
+                    console.log(error);
+                },
+            });
+            console.log('안녕하세요.');
+        });
+    </script>
+</head>
+<body>
+    <table id="member" border="1">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>비밀 신분</th>
+            <th>능력</th>
+        </tr>
+    </table>
+</body>
+</html>

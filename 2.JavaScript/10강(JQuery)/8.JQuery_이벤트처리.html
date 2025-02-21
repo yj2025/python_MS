@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            // 클론 만들기
+            $('#eDiv').click(function () {
+                $("#eDiv").clone().appendTo($('body'));
+           });
+
+            $('.logo').click(function () {
+                console.log('로고를 누르셨습니다.');
+            });
+
+            $('.logo').mousedown(function () {
+                console.log('로고를 누르셨습니다.');
+            });
+        });
+
+        $(document).ready(function () {
+            $('#eDiv').dblclick(function () {
+                console.log('dblclick event!');
+            });
+
+            $('#eDiv').mousedown(function () {
+                console.log('mousedown event!');
+            });
+
+            $('#eDiv').mouseup(function () {
+                console.log('mouseup event!');
+            });
+
+            $('#eDiv').mousemove(function () {
+                console.log('mousemove event!');
+            });
+
+            $('#eDiv').mouseover(function () {
+                console.log('mouseover event!');
+            });
+
+            $('#eDiv').mouseout(function () {
+                console.log('mouseout event!');
+            });
+
+            $('#eDiv').mouseenter(function () {
+                console.log('mouseenter event!');
+            });
+
+            $('#eDiv').mouseleave(function () {
+                console.log('mouseleave event!');
+            });
+        });
+    </script>
+
+
+    <style>
+        #eDiv {
+            width: 100px;
+            height: 100px;
+            background: #ff0000;
+            line-height: 100px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: bolder;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img class="logo" src="img/logo.png">
+
+        <div id="eDiv">jQuery Event</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script>
+        // $(document).ready(function() {
+        //     let wrap = $('#wrap');
+
+        //     let divObj = $('<div>안녕 제이쿼리!</div>');
+        //     divObj.appendTo(wrap);
+        //     divObj.css('background', 'green');
+            
+        //     $('<div>안녕 제이쿼리!</div>')
+        //     .appendTo(wrap)
+        //     .css('background', 'yellow');
+            
+        //     let imgObj = $('<img src="img/logo.png"/>');
+        //     imgObj.appendTo(wrap);
+        // });
+
+        $(function () {
+            let wrap = $('#wrap');
+            // 객체 생성
+            let divObj = $("<div>Hellow jQuery!</div>");
+
+            // 객체 집어넣기
+            // divObj.appendTO(wrap);
+
+            // 부모 객체 자식 집어넣기
+            wrap.append(divObj);
+
+            // 첫번째 자식으로 집어넣기
+            wrap.prepend('<div>안녕하세요</div>');
+            $('<div>안녕하세요!!!!</div>').prependTo(wrap);
+            
+            // 막내
+            $('<div>막내</div>').insertAfter(wrap);
+            wrap.after('<div>막내!!!</div>') // 마지막에서 바로 위
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div>content</div>
+    </div>
+</body>
+</html>

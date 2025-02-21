@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+
+            $('*').css('fontSize', '1.1em');
+            $('li').css('color', '#0000ff');
+            
+            // id
+            $('#item').css('background-color', '#ffff00').css('width','300px');
+
+            // class
+            $('.seoul').css('background-color', 'red');
+            
+            
+            $('#wrap p').css('border', '2px solid #cccccc');
+            
+            // #wrap 직계 자식
+            $('#wrap > p').css('border', '5px solid #cccccc');
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <p>jQuery selector</p>
+        <div id="centent">
+            <h1>centent</h1>
+            <p>ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅌ</p>
+            <p>ABCDEFGHIJKLMN</p>
+        </div>
+        <div id="item">
+            <ul>
+                <li class="seoul">서울</li>
+                <li class="gyeonggi_do">경기도</li>
+                <li>충청도</li>
+                <li>전라도</li>
+                <li>경상도</li>
+                <li>강원도</li>
+                <li>제주도</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

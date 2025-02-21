@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <style>
+        #wrap .contents1 .p {
+            background: #ff0000;
+        }
+
+        #wrap .contents2 .p {
+            background: #ffff00;
+        }
+    </style>
+    <script>
+        $(function () {
+
+            // $("#wrap > .contents1 > .p").appendTo($("#wrap > .contents2"));
+            let copy = $("#wrap > .contents1 > .p").clone();
+            copy.appendTo($("#wrap > .contents1"));
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="contents1">
+
+            <p class="p">contents1</p>
+        </div>
+    </div>
+</body>
+</html>

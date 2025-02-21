@@ -1,0 +1,52 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {            
+            $.ajax({
+                type: 'GET',
+                url: 'https://sample.bmaster.kro.kr/contacts?pageno=3&pagesize=10',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+
+
+                    $.each(response.contacts, function (index, item) {
+                        $('#member').append(
+                            '<tr>' +
+                                '<td>' + item.no + '</td>' +
+                                '<td>' + item.name + '</td>' +
+                                '<td>' + item.tel + '</td>' +
+                                '<td>' + item.address + '</td>' +
+                                '<td><img src="' + item.photo + '" alt="사진" width="50"></td>' + 
+                                '<td><button class="delete-btn">삭제</button></td>' + 
+                            '</tr>'
+                        );
+                    });
+
+                    $(document).on('click', '.delete-btn', function () {
+                        $(this).closest('tr').remove();
+                    });
+
+                },
+                
+                error: function (error) {
+                    console.log(error);
+                },
+            });
+            console.log('안녕하세요.');
+        });
+    </script>
+</head>
+<body>
+    <table id="member" border="1">
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>전화번호</th>
+            <th>주소</th>
+            <th>사진</th>
+            <th>삭제</th>
+        </tr>
+    </table>
+</body>
+</html>
