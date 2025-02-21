@@ -1,16 +1,24 @@
-<!DOCTYPE html>
-<head>
-
-</head>
 <body>
-    <header>
-        <nav class="header-menu">
-          <a href="#">게임사이트</a>
-          <a href="#">로또</a>
-          <a href="#">가위바위보</a>
-          <a href="#">jobList 게시판</a>
-        </nav>
-      </header>
+<script>
+    function Grade(name, kor, math, eng) {
+        this.name = name;
+        this.kor = kor;
+        this.math = math;
+        this.eng = eng;
+        
 
+        this.total = function() {
+        return this.kor + this.math + this.eng;
+        };
+        
+        this.avg = function() {
+            return this.total() / 3;
+        };
+
+    };
+
+    let hong = new Grade('홍길동', 100, 90, 80);
+    document.write(hong.total() + '<br>');
+    document.write(hong.avg() + '<br>');
+</script>
 </body>
-</html>

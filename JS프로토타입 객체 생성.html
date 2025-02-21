@@ -1,0 +1,48 @@
+<body>
+    <script>
+        function GradeExample(name, kor, eng, math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+
+            this.total = function () {
+                return this.kor + this.eng + this.math;
+            };
+
+            this.avg = function () {
+            return this.total() / 3;
+            };
+        }
+    
+        function GradeProto(name, kor, eng, math) {
+            this.name = name;
+            this.kor = kor;
+            this.eng = eng;
+            this.math = math;
+        }
+    
+        //프로토타입 객체에 메서드 상속
+        GradeProto.prototype.total = function () {
+            return this.kor + this.eng + this.math;
+        };
+    
+        GradeProto.prototype.avg = function () {
+            return this.total() / 3;
+        };
+    
+        GradeProto.prototype.count = 1;
+
+
+
+        // GradeExample 객체 생성
+        const student1 = new GradeExample('학생1', 80, 90, 85);
+        console.log(student1.total());  // 255
+        console.log(student1.avg());    // 85
+
+        // GradeProto 객체 생성
+        const student2 = new GradeProto('학생2', 75, 85, 80);
+        console.log(student2.total());  // 240
+        console.log(student2.avg());    // 80
+    </script>
+</body>
