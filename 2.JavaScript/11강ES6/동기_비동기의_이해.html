@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1. 동기(순차적 실행), 비동기의 이해
+      function fun1() {
+        document.write("1번 입니다." + "<br>");
+        fun2();
+      }
+      function fun2() {
+        document.write("2번 입니다." + "<br>");
+        fun3();
+      }
+      function fun3() {
+        document.write("3번 입니다." + "<br>");
+      }
+
+      fun1();
+
+      document.write("<hr>");
+
+      // 비동기
+      // Callback
+      // Promise
+      // async / await
+
+      function fun4(callback) {
+        setTimeout(() => {
+          console.log("4번 입니다." + "<br>");
+
+          // fun5
+          callback();
+        }, 3000);
+      }
+
+      function fun5() {
+        console.log("5번 입니다." + "<br>");
+      }
+
+      fun4(fun5);
+
+      function callbackHell() {
+        setTimeout(() => {
+          console.log("6번 입니다.");
+
+          setTimeout(() => {
+            console.log("7번 입니다.");
+
+            setTimeout(() => {
+              console.log("8번 입니다.");
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }
+
+      callbackHell();
+    </script>
+  </head>
+  <body></body>
+</html>
