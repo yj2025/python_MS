@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 1. 동기(순차적 실행), 비동기의 이해
+      function fun1() {
+        document.write("1번 입니다." + "<br>");
+        fun2();
+      }
+      function fun2() {
+        document.write("2번 입니다." + "<br>");
+        fun3();
+      }
+      function fun3() {
+        document.write("3번 입니다." + "<br>");
+      }
+
+      fun1();
+
+      document.write("<hr>");
+
+      function fun4() {
+        setTimeout(() => {
+          console.log("4번 입니다." + "<br>");
+        }, 3000);
+
+        fun5();
+      }
+
+      function fun5() {
+        console.log("5번 입니다." + "<br>");
+      }
+
+      fun4();
+    </script>
+  </head>
+  <body></body>
+</html>

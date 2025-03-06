@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로형 카드 레이아웃</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .card {
+            display: flex;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 600px;
+            margin: 20px;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .card-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .card-content p {
+            margin: 10px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .card-footer {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .card-footer a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        .card-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/150" alt="Card Image">
+        <div class="card-content">
+            <h3>카드 제목</h3>
+            <p>이 카드의 내용은 여기에서 확인할 수 있습니다. 간단한 설명이나 추가적인 정보를 표시할 수 있습니다.</p>
+            <div class="card-footer">
+                <a href="#">더 알아보기</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
